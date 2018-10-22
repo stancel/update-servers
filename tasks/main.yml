@@ -62,7 +62,7 @@
       # local_action: wait_for host={{ ansible_ssh_host }} state=started port=22 delay=30 timeout=300 connect_timeout=15
     
   # Only execute the above task block if we have specifed to reboot and the server needs it
-  when: reboot == "yes" and reboot_required_file.stat.exists
+  when: update_servers_reboot == "yes" and reboot_required_file.stat.exists
 
 
 
